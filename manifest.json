@@ -72,6 +72,12 @@
             "strict_max_Version": "*",
             "strict_min_version": "0.10.0"
         }
-    }
+    },
+    "web_accessible_ressources":[
+        "css/*.css",
+        "images/*.svg",
+        "js/*.js",
+        "views/*.html"
+    ]
 
 }
