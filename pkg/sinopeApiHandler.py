@@ -2,8 +2,10 @@ import os
 import sys
 sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), "lib"))
 from gateway_addon import APIHandler, APIResponse, Database
-
+import functools
 import json
+
+print = functools.partial(print, flush=True)
 
 _TIMEOUT = 3
 _CONFIG_PATH = [
