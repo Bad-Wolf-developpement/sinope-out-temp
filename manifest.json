@@ -59,6 +59,9 @@
         {
             "css":[
                 "css/extensions.css"
+            ],
+            "js":[
+                "js/extension.js"
             ]
         }
     ],
