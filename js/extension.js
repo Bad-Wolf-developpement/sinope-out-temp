@@ -1,9 +1,10 @@
 (function() {
-    console.log("extension.js loaded")
-    class sinopeOutTemp extends window.Extension{
+    console.log("extension.js loaded");
+    class sinopeOutTemp extends window.Extension {
         constructor(){
-            super('sinope-out-temp');
-            this.addMenuEntry('Sinope Outside Temperature');
+            console.log("extension.js class created");
+            super('sinopeouttemp');
+            this.addMenuEntry('Sinope');
             
             if(!window.Extension.prototype.hasOWnProperty('load')){
                 this.load();
@@ -24,7 +25,6 @@
             this.view.innerHTML = this.content;
         }
     }
-
     
     new sinopeOutTemp();
 })();
