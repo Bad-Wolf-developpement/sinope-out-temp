@@ -18,6 +18,6 @@ def cleanup(signum, frame):
 if __name__ == '__main__':
     signal.signal(signal.SIGINT, cleanup)
     signal.signal(signal.SIGTERM, cleanup)
-
+    """
     while _HANDLER.proxy_running():
-        time.sleep(2)
+        time.sleep(2)"""
