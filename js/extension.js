@@ -11,7 +11,7 @@
 
         load(){
             this.content = '';
-            return fetch('/extensions/${this.id}/views/content.html')
+            return fetch(`/extensions/${this.id}/views/content.html`)
             .then((res)=> res.text())
             .then((text) =>{
                 this.content = text;
