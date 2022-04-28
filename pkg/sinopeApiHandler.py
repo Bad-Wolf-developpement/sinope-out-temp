@@ -20,7 +20,7 @@ class SinopeAPIHandler(APIHandler):
         self.ready = False
 
         self.api_server = 'http://127.0.0.1:8080'
-        self.DEBUG = False #TODO: use config debug_mode
+        self.DEBUG = True #TODO: use config debug_mode
 
         try:
             manifest_fname = os.path.join(
@@ -34,6 +34,11 @@ class SinopeAPIHandler(APIHandler):
             
             super().__init__(manifest['id'])
             self.manager_proxy.add_api_handler(self)
+
+            if self.DEBUG:
+                print("self.manager_proxy = " + str(self.manager_proxy))
+                print("Created new API HANDLER: " + str(manifest['id']))
+
         except Exception as e:
             print("Failed to init ux extension API handler: " + str(e))
         self.ready = True
