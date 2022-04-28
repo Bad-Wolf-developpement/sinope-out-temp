@@ -1,4 +1,21 @@
-{
+{    "content_scripts": [
+    {
+        "css":[
+            "css/extension.css"
+        ],
+        "js":[
+            "js/extension.js"
+        ]
+    }
+    ],
+    "gateway_specific_settings":{
+        "webthings":{
+            "exec": "{nodeLoader} {path}",
+            "primary_type": "extension",
+            "strict_max_Version": "*",
+            "strict_min_version": "0.10.0"
+        }
+    },
     "manifest_version": 1,
     "id": "sinope-out-temp",
     "name": "Sinope Outside Temperature Provider",
@@ -53,24 +70,6 @@
                     "description":"Enable Debug Log"
                }
            }
-        }
-    },
-    "content_scripts": [
-        {
-            "css":[
-                "css/extension.css"
-            ],
-            "js":[
-                "js/extension.js"
-            ]
-        }
-    ],
-    "gateway_specific_settings":{
-        "webthings":{
-            "exec": "{nodeloader} {path}",
-            "primary_type": "extension",
-            "strict_max_Version": "*",
-            "strict_min_version": "0.10.0"
         }
     },
     "web_accessible_ressources":[
