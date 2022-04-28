@@ -1,4 +1,5 @@
 (function() {
+    console.log("extension.js loaded")
     class sinopeOutTemp extends window.Extension{
         constructor(){
             super('sinope-out-temp');
@@ -24,6 +25,6 @@
         }
     }
 
-    console.log("extension.js loaded")
+    
     new sinopeOutTemp();
 })();
