@@ -36,3 +36,4 @@ class SinopeAPIHandler(APIHandler):
             self.manager_proxy.add_api_handler(self)
         except Exception as e:
             print("Failed to init ux extension API handler: " + str(e))
+        self.ready = True
