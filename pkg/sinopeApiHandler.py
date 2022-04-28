@@ -14,6 +14,7 @@ if 'WEBTHINGS_HOME' in os.environ:
     _CONFIG_PATH.insert(0, os.path.join(os.environ['WEBTHINGS_HOME'], 'config'))
 
 class SinopeAPIHandler(APIHandler):
+
     def __init__(self, verbose=False):
         self.addon_name = 'sinope-out-temp'
         self.running = True
@@ -23,6 +24,7 @@ class SinopeAPIHandler(APIHandler):
         self.DEBUG = True #TODO: use config debug_mode
 
         try:
+            print("Trying my best")
             manifest_fname = os.path.join(
                 os.path.dirname(__file__),
                 '..',
