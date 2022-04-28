@@ -12,6 +12,10 @@
         load(){
             this.content = '';
         }
+
+        show(){
+            this.view.innerHTML = this.content;
+        }
     }
 
 
