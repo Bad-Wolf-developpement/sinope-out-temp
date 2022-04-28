@@ -1,6 +1,6 @@
 {
     "manifest_version": 1,
-    "id": "sinope_out_temp",
+    "id": "sinope-out-temp",
     "name": "Sinope Outside Temperature Provider",
     "short_name": "sinope_out_temp",
     "version" : "0.0.1",
