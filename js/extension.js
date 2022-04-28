@@ -3,7 +3,7 @@
         constructor(){
             super('sinope-out-temp');
             this.addMenuEntry('Sinope Outside Temperature');
-            console.log("extension.js loaded")
+            
             if(!window.Extension.prototype.hasOWnProperty('load')){
                 this.load();
             }
@@ -24,6 +24,6 @@
         }
     }
 
-
+    console.log("extension.js loaded")
     new sinopeOutTemp();
 })();
