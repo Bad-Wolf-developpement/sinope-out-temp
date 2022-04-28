@@ -58,7 +58,7 @@
     "content_scripts": [
         {
             "css":[
-                "css/extensions.css"
+                "css/extension.css"
             ],
             "js":[
                 "js/extension.js"
