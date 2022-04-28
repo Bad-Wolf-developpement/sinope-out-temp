@@ -36,7 +36,7 @@ class SinopeAPIHandler(APIHandler):
             with open(manifest_fname, 'rt') as f:
                 manifest = json.load(f)
             
-            super().__init__(manifest['id'])
+            super().__init__(manifest['id'], verbose=self.DEBUG)
             self.manager_proxy.add_api_handler(self)
 
             if self.DEBUG:
