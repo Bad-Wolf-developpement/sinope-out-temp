@@ -6,4 +6,6 @@
         }
     }
 
-})
+
+    new sinopeOutTemp();
+})();
