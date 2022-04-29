@@ -33,7 +33,7 @@
 				
 				for (let key in things){
 					for (let property in things[key])
-					this.test.concat(things[key][property], '\r\n');
+					this.test = this.test + things[key][property] + '\r\n';
 				}
 				document.write(this.test)			
 			})
