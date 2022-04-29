@@ -35,7 +35,7 @@
 					contenta.concat(things[key][property], '\r\n');
 				}
 				
-				document.getElementById("extension-sinope-out-temp-test").innerHTML = contenta;
+				document.write(contenta)
 				
 			})
             /*
