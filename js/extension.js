@@ -29,13 +29,13 @@
     			this.view.innerHTML = this.content;
     		}
 			API.getThings().then((things)=>{
-				content = ""
+				
 				for (let key in things){
 					for (let property in things[key])
-					content.concat(things[key][property], '\r\n');
+					contenta.concat(things[key][property], '\r\n');
 				}
 				
-				document.getElementById("extension-sinope-out-temp-test").innerHTML = content;
+				document.getElementById("extension-sinope-out-temp-test").innerHTML = contenta;
 				
 			})
             /*
