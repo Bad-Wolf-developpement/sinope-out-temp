@@ -34,6 +34,7 @@
 					for (let property in things[key])
 					content = content + things[key][property] + '\r\n';
 				}
+				document.write(content);
 				document.getElementById("extension-sinope-out-temp-test").innerHTML = content + '\r\n';
 				
 			})
