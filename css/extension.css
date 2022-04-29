@@ -2,8 +2,8 @@ body {
     background-color:rgb(93, 155, 199)!important
 }
 
-#extension-sinope-out-temp-menu-item{
-    background-image: url('../images/menu-icon.svg');
+#main-menu #extension-sinope-out-temp-menu-item{
+    background-image: url(../images/menu-icon.svg);
 } 
 
 #extension-sinope-out-temp-title{
@@ -29,8 +29,4 @@ body {
     max-width:60rem;
     margin:0 auto;
     padding:2rem;
-}
-
-#main-menu #extension-sinope-out-temp-menu-item {
-    background-image: url('../images/menu-icon.svg');
 }
