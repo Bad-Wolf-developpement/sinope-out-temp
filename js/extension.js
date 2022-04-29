@@ -6,7 +6,7 @@
             super('sinope-out-temp');
             this.addMenuEntry('Sinope');
 
-			this.sinope_thermostats = [];
+			this.thermostats = [];
             
             this.content = '';
 			fetch(`/extensions/${this.id}/views/content.html`)
@@ -32,7 +32,9 @@
 			API.getThings().then((things)=>{
 				
 				for (let key in things){
-					this.test = this.test + things[key]['description'] + '\r\n';
+					if (things[key]['@type'] == "Thermostat"){
+						this.test = this.test + things[key]['title'] + '\r\n';
+					}
 				}
 				document.getElementById("extension-sinope-out-temp-test").innerHTML = this.test;
 			})
