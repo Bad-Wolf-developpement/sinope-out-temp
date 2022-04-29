@@ -64,7 +64,7 @@
     ],
     "gateway_specific_settings":{
         "webthings":{
-            "exec": "{nodeloader} {path}",
+            "exec": "python3 {path}/main.py",
             "primary_type": "extension",
             "strict_max_version": "*",
             "strict_min_version": "0.10.0"
