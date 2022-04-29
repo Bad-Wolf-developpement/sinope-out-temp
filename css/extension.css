@@ -31,7 +31,7 @@ body {
     padding:2rem;
 }
 
-#extension-sinope-out-temp-content-container{
+#extension-sinope-out-temp-content-view{
     margin-left:10rem;
     width:calc(100vw - 10rem);
     height:100vh;
