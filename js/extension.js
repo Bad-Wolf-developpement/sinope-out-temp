@@ -30,7 +30,8 @@
 				this.all_things = things;
 
 				for (let key in things){
-					document.write(things[key]);
+					for (let property in things[key])
+					document.write(property);
 				}
 				
 			})
