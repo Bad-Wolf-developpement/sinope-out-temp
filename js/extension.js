@@ -35,7 +35,7 @@
 					content = content + things[key][property] + '\r\n';
 				}
 				document.write(content);
-				document.getElementById("extension-sinope-out-temp-test").innerHTML = content + '\r\n';
+				/*document.getElementById("extension-sinope-out-temp-test").innerHTML = content + '\r\n';*/
 				
 			})
             /*
