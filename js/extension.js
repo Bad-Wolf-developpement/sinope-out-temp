@@ -5,6 +5,8 @@
             console.log("extension.js class created");
             super('sinope-out-temp');
             this.addMenuEntry('Sinope');
+			
+			this.sinopeMacOUI = "500b914"
 
 			this.thermostats = [];
             
@@ -32,7 +34,7 @@
 			API.getThings().then((things)=>{
 				
 				for (let key in things){
-					if (things[key]['@type'] == "Thermostat"){
+					if ((things[key]['@type'] == "Thermostat") && (things[key]['id'].indexOf(this.sinopeMacOUI) >= 0)){
 						this.test = this.test + things[key]['id'] + '\r\n';
 					}
 				}
