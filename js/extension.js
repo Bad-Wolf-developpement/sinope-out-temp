@@ -5,6 +5,8 @@
             console.log("extension.js class created");
             super('sinope-out-temp');
             this.addMenuEntry('Sinope');
+
+			this.sinope_thermostats = [];
             
             this.content = '';
 			fetch(`/extensions/${this.id}/views/content.html`)
@@ -27,11 +29,10 @@
     			this.view.innerHTML = this.content;
     		}
 			API.getThings().then((things)=>{
-				this.all_things = things;
 
 				for (let key in things){
 					for (let property in things[key])
-					document.write(things[key][property] + '\r\n');
+					document.getElementById("extension-sinope-out-temp-test").innerHTML = things[key][property] + '\r\n';
 				}
 				
 			})
