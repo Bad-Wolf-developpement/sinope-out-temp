@@ -31,7 +31,6 @@
     			this.view.innerHTML = this.content;
     		}
 			
-			console.log(this.sinope_thermostats)
             /*
 			window.API.postJson(
 				`/extensions/${this.id}]/api/init`,
