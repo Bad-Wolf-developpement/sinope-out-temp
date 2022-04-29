@@ -1,7 +1,7 @@
 body {
     background-color:rgb(93, 155, 199)!important;
     width: calc(100% - 10rem);
-    margin-right: 0.5rem;
+    margin-right: 10rem;
 }
 
 #main-menu #extension-sinope-out-temp-menu-item{
