@@ -29,6 +29,11 @@ body {
     max-width:60rem;
     margin:0 auto;
     padding:2rem;
-    width: calc(100% - 10rem);
-    margin-right: 10rem;
 }
+
+#extension-sinope-out-temp-content-container{
+    margin-left:10rem;
+    width:calc(100vw - 10rem);
+    height:100vh;
+    overflow:auto;
+    }
