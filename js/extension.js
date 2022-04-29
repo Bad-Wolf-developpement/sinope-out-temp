@@ -28,15 +28,14 @@
     		else{
     			this.view.innerHTML = this.content;
     		}
+			this.test= ""
 			API.getThings().then((things)=>{
 				
 				for (let key in things){
 					for (let property in things[key])
-					document.write(things[key][property] + '\r\n');
+					this.test.concat(things[key][property], '\r\n');
 				}
-				
-				
-				
+				document.write(this.test)			
 			})
             /*
 			window.API.postJson(
