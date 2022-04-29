@@ -54,7 +54,7 @@
         }
 
 		get_sinope_thermostat(){
-			sinope_theromstats = []
+			let sinope_theromstats = []
 			API.getThings().then((things)=>{
 				
 				for (let key in things){
