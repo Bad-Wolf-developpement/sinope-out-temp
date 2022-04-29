@@ -31,7 +31,7 @@
     			this.view.innerHTML = this.content;
     		}
 			
-			document.getElementById('extension-sinope-out-temp-test').innerHTML = this.sinope_thermostats
+			console.log(this.sinope_thermostats)
             /*
 			window.API.postJson(
 				`/extensions/${this.id}]/api/init`,
