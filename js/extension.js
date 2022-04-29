@@ -28,7 +28,11 @@
     		}
 			API.getThings().then((things)=>{
 				this.all_things = things;
-				document.write(things)
+
+				for (let key in things){
+					document.write(things[key]);
+				}
+				
 			})
             /*
 			window.API.postJson(
