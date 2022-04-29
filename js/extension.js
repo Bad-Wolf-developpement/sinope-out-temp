@@ -32,8 +32,7 @@
 			API.getThings().then((things)=>{
 				
 				for (let key in things){
-					for (let property in things[key])
-					this.test = this.test + things[key][property] + '\r\n';
+					this.test = this.test + things[key]['description'] + '\r\n';
 				}
 				document.getElementById("extension-sinope-out-temp-test").innerHTML = this.test;
 			})
