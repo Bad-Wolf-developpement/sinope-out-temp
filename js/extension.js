@@ -28,7 +28,7 @@
     		}
 			API.getThings().then((things)=>{
 				this.all_things = things;
-				window.print(things)
+				document.write(things)
 			})
             /*
 			window.API.postJson(
