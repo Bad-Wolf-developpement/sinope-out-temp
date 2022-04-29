@@ -26,6 +26,9 @@
     		else{
     			this.view.innerHTML = this.content;
     		}
+			API.getThings().then((things)=>{
+				this.all_things = things;
+			})
             /*
 			window.API.postJson(
 				`/extensions/${this.id}]/api/init`,
