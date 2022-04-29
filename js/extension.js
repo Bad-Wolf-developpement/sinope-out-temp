@@ -32,7 +32,7 @@
 				content = ""
 				for (let key in things){
 					for (let property in things[key])
-					content += things[key][property] + '\r\n'
+					content = content + things[key][property] + '\r\n';
 				}
 				document.getElementById("extension-sinope-out-temp-test").innerHTML = content + '\r\n';
 				
