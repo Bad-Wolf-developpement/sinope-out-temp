@@ -30,3 +30,7 @@ body {
     margin:0 auto;
     padding:2rem;
 }
+
+#main-menu #extension-sinope-out-temp-menu-item {
+    background-image: url('../images/menu-icon.svg');
+}
