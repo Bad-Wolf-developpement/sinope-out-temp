@@ -30,7 +30,6 @@
     		else{
     			this.view.innerHTML = this.content;
     		}
-			
             /*
 			window.API.postJson(
 				`/extensions/${this.id}]/api/init`,
