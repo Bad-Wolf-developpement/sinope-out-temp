@@ -33,8 +33,8 @@ body {
 }
 
 #extension-sinope-out-temp-content-container{
-    margin-left:110rem;
+    margin-right:10rem;
     width:calc(100vw - 10rem);
     height:100vh;
     overflow:auto;
-    }
+}
