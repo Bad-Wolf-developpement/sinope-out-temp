@@ -35,6 +35,7 @@ body {
 
 #extension-sinope-out-temp-content-container{
     margin-left:10rem;
+    font-size: 1.8rem;
     width:calc(100vw - 10rem);
     height:100vh;
     overflow:auto;
