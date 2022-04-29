@@ -31,7 +31,7 @@
 
 				for (let key in things){
 					for (let property in things[key])
-					document.write(property + '\r\n');
+					document.write(things[key][property] + '\r\n');
 				}
 				
 			})
