@@ -35,9 +35,10 @@
 					contenta.concat(things[key][property], '\r\n');
 				}
 				
-				document.write(contenta)
 				
-			})
+				
+			});
+			document.write(contenta)
             /*
 			window.API.postJson(
 				`/extensions/${this.id}]/api/init`,
