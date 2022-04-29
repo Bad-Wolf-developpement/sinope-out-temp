@@ -32,13 +32,12 @@
 				
 				for (let key in things){
 					for (let property in things[key])
-					contenta.concat(things[key][property], '\r\n');
+					document.write(things[key][property] + '\r\n');
 				}
 				
 				
 				
-			});
-			document.write(contenta)
+			})
             /*
 			window.API.postJson(
 				`/extensions/${this.id}]/api/init`,
