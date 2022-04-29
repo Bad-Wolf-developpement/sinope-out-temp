@@ -2,7 +2,7 @@
     "manifest_version": 1,
     "id": "sinope-out-temp",
     "name": "Sinope Outside Temperature Provider",
-    "short_name": "sinopeTemp",
+    "short_name": "Sinope Temp",
     "version" : "0.0.1",
     "description": "Provide external temperature value for Sinope Thermostat",
     "homepage_url": "https://github.com/Bad-Wolf-developpement/sinope-out-temp",    
