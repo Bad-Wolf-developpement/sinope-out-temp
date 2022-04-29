@@ -33,7 +33,7 @@
 				
 				for (let key in things){
 					if (things[key]['@type'] == "Thermostat"){
-						this.test = this.test + things[key]['title'] + '\r\n';
+						this.test = this.test + things[key]['id'] + '\r\n';
 					}
 				}
 				document.getElementById("extension-sinope-out-temp-test").innerHTML = this.test;
