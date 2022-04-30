@@ -35,7 +35,7 @@
 				let tempTest = ""
 				for (let thing in things){
 					for (let property in thing['properties']){
-						document.write(property)
+						window.write(property)
 					}
 				}
 			})
