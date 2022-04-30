@@ -9,6 +9,7 @@
 			this.sinopeMacOUI = "500b914"
 
 			this.sinope_thermostats = this.get_sinope_thermostat();
+			this.temperature_property = this.get_temp_property();
             
             this.content = '';
 			fetch(`/extensions/${this.id}/views/content.html`)
@@ -30,17 +31,7 @@
     		else{
     			this.view.innerHTML = this.content;
     		}
-			let tempProperty = []
-			API.getThings().then((things)=> {
-				let tempTest = ""
-				for (let thing in things){
-					for (let property in things[thing]['properties']){
-							tempTest = tempTest + things[thing]['properties'][property]['@type'] + '\r\n'
-					}
-				}
-				document.getElementById("extension-sinope-out-temp-test")
-						.innerHTML = tempTest;
-			})
+			
             /*
 			window.API.postJson(
 				`/extensions/${this.id}]/api/init`,
@@ -75,6 +66,24 @@
 				}
 			})
 			return sinope_theromstats;
+		}
+
+		get_temp_property(){
+			let tempProperty = []
+			API.getThings().then((things)=> {
+				for (let thing in things){
+					let thingID = things[thing]['id']
+					for (let property in things[thing]['properties']){
+							let propertyID = things[thing]['properties'][propertu]['id']
+							if (things[thing]['properties'][property]['@type'] == "TemperatureProperty"){
+								if (!tempProperty.includes([thingID, propertyID])){
+									tempProperty.push([thingID, propertyID])
+								}
+							}
+					}
+				}
+				return tempProperty
+			})
 		}
     }
     
