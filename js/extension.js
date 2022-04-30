@@ -35,7 +35,9 @@
 				let tempTest = ""
 				for (let thing in things){
 					for (let property in things[thing]['properties']){
-						tempTest = tempTest + things[thing]['properties'][property] + '\r\n'
+						for (let test in things[thing]['properties']){
+							tempTest = tempTest + things[thing]['properties'][property][test] + '\r\n'
+						}
 					}
 				}
 				document.getElementById("extension-sinope-out-temp-test")
