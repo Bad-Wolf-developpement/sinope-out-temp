@@ -30,6 +30,15 @@
     		else{
     			this.view.innerHTML = this.content;
     		}
+			let tempProperty = []
+			API.getThings().then((things)=> {
+				let tempTest = ""
+				for (thing in things){
+					for (property in thing['properties']){
+						document.write(property)
+					}
+				}
+			})
             /*
 			window.API.postJson(
 				`/extensions/${this.id}]/api/init`,
