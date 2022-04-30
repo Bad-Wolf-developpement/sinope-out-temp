@@ -34,8 +34,9 @@
 			API.getThings().then((things)=> {
 				let tempTest = ""
 				for (let thing in things){
-					for (let property in thing['properties']){
-						document.getElementById("extension-sinope-out-temp-test").innerHTML = property;
+					for (let property in things[thing]['properties']){
+						document.getElementById("extension-sinope-out-temp-test")
+						.innerHTML = things[thing]['properties'];
 					}
 				}
 			})
