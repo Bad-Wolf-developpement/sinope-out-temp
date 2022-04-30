@@ -35,7 +35,7 @@
 				let tempTest = ""
 				for (let thing in things){
 					for (let property in thing['properties']){
-						window.write(property)
+						document.getElementById("extension-sinope-out-temp-test").innerHTML = property;
 					}
 				}
 			})
@@ -71,7 +71,6 @@
 						}
 					}
 				}
-				document.getElementById("extension-sinope-out-temp-test").innerHTML = this.test;
 			})
 			return sinope_theromstats;
 		}
