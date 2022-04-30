@@ -36,7 +36,7 @@
 				for (let thing in things){
 					for (let property in things[thing]['properties']){
 						document.getElementById("extension-sinope-out-temp-test")
-						.innerHTML = things[thing]['properties'];
+						.innerHTML = things[thing]['properties'][property];
 					}
 				}
 			})
