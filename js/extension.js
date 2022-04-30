@@ -35,10 +35,11 @@
 				let tempTest = ""
 				for (let thing in things){
 					for (let property in things[thing]['properties']){
-						document.getElementById("extension-sinope-out-temp-test")
-						.innerHTML = things[thing]['properties'][property];
+						tempTest = tempTest + things[thing]['properties'][property] + '\r\n'
 					}
 				}
+				document.getElementById("extension-sinope-out-temp-test")
+						.innerHTML = tempTest;
 			})
             /*
 			window.API.postJson(
