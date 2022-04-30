@@ -33,8 +33,8 @@
 			let tempProperty = []
 			API.getThings().then((things)=> {
 				let tempTest = ""
-				for (thing in things){
-					for (property in thing['properties']){
+				for (let thing in things){
+					for (let property in thing['properties']){
 						document.write(property)
 					}
 				}
