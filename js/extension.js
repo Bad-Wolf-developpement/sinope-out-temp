@@ -55,6 +55,7 @@
         }
 
 		get_sinope_thermostat(){
+			console.log('get sinope thermostats')
 			let sinope_theromstats = []
 			API.getThings().then((things)=>{
 				
