@@ -22,9 +22,13 @@
 
         async show(){
             let testDiv = 'extension-sinope-out-temp-test';
+			console.log('Before sync');
 			console.log(this.sinope_thermostats);
 			console.log(this.temperature_property);
-			await this.async_get_sinope();
+			await this.sync_data();
+			console.log('after sync')
+			console.log(this.sinope_thermostats);
+			console.log(this.temperature_property);
 			
 			await this.async_get_temp_properties();
     		if(this.content == ''){
@@ -87,8 +91,9 @@
 			return sinope_theromstats;
 		}
 
-		async async_get_sinope(){
+		async sync_data(){
 			this.sinope_thermostats = await this.get_sinope_thermostat()
+			this.temperature_property = await this.get_temp_property
 		}
 
 		async get_temp_property(){
@@ -109,10 +114,6 @@
 				}	
 			})
 			return tempProperty;
-		}
-
-		async async_get_temp_properties(){
-			this.temperature_property = await this.get_temp_property()
 		}
     }
     
