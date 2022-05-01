@@ -67,7 +67,7 @@
         }
 
 		async get_sinope_thermostat(){
-			return new Promise((temp_sinope_thermostat) => {
+			return new Promise((resolve, reject) => {
 			console.log('get sinope thermostats')
 			let temp_sinope_theromstats = []
 			API.getThings().then((things)=>{
@@ -84,6 +84,7 @@
 				//console.log('sinope thermostats: '+ sinope_theromstats)
 				
 			})
+			resolve(temp_sinope_theromstats)
 		})
 		};
 
