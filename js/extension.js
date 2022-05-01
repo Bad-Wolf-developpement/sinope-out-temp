@@ -8,9 +8,9 @@
 			
 			this.sinopeMacOUI = "500b914"
 
-			this.sinope_thermostats = await this.get_sinope_thermostat();
+			this.sinope_thermostats = this.async_get_sinope();
 			
-			this.temperature_property = await this.get_temp_property();
+			this.temperature_property = this.async_get_temp_properties();
             
             this.content = '';
 			fetch(`/extensions/${this.id}/views/content.html`)
@@ -88,6 +88,10 @@
 			return sinope_theromstats;
 		}
 
+		async async_get_sinope(){
+			return await this.get_sinope_thermostat()
+		}
+
 		async get_temp_property(){
 			let tempProperty = []
 			API.getThings().then((things)=> {
@@ -106,6 +110,10 @@
 				}	
 			})
 			return tempProperty;
+		}
+
+		async async_get_temp_properties(){
+			return await this.get_temp_property()
 		}
     }
     
