@@ -59,13 +59,15 @@
 			API.getThings().then((things)=>{
 				
 				for (let key in things){
-					if ((things[key]['@type'] == "Thermostat") && (things[key]['id'].indexOf(this.sinopeMacOUI) >= 0)){
+					if ((things[key]['@type'] == "Thermostat") && (things[key]['id']
+					.indexOf(this.sinopeMacOUI) >= 0)){
 						if (!sinope_theromstats.includes(things[key]['id'])){
 							sinope_theromstats.push(things[key]['id']);
 						}
 					}
 				}
 			})
+			console.log('sinope thermostats: '+ sinope_theromstats)
 			return sinope_theromstats;
 		}
 
