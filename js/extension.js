@@ -2,13 +2,15 @@
     console.log("extension.js loaded");
     class sinopeOutTemp extends window.Extension {
         constructor(){
+			this.get_sinope_thermostat();
+			this.get_temp_property();
             console.log("extension.js class created");
             super('sinope-out-temp');
             this.addMenuEntry('Sinope');
 			
 			this.sinopeMacOUI = "500b914"
 
-			this.sinope_thermostats = get_sinope_thermostat();
+			this.sinope_thermostats = this.get_sinope_thermostat();
 			console.log(this.sinope_thermostats)
 			this.temperature_property = get_temp_property();
             
@@ -70,8 +72,9 @@
 					}
 				}
 				//console.log('sinope thermostats: '+ sinope_theromstats)
-				return sinope_theromstats;
+				
 			})
+			return sinope_theromstats;
 			
 		}
 
