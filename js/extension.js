@@ -83,7 +83,7 @@
 				for (let thing in things){
 					let thingID = things[thing]['id']
 					for (let property in things[thing]['properties']){
-							let propertyID = things[thing]['properties'][property]['id']
+							let propertyTitle = things[thing]['properties'][property]['title']
 							if (things[thing]['properties'][property]['@type'] == "TemperatureProperty"){
 								if (!tempProperty.includes([thingID, propertyID])){
 									tempProperty.push([thingID, propertyID]);
