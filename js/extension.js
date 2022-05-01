@@ -67,25 +67,23 @@
         }
 
 		async get_sinope_thermostat(){
-			return new Promise((resolve, reject) => {
 			console.log('get sinope thermostats')
-			let temp_sinope_theromstats = []
+			let sinopeTheromstats = []
 			API.getThings().then((things)=>{
 				
 				for (let key in things){
 					if ((things[key]['@type'] == "Thermostat") && (things[key]['id']
 					.indexOf(this.sinopeMacOUI) >= 0)){
-						if (!temp_sinope_theromstats.includes(things[key]['id'])){
+						if (!sinopeTheromstats.includes(things[key]['id'])){
 							//console.log('thermostats id: ' + things[key]['id'])
-							temp_sinope_theromstats.push(things[key]['id']);
+							sinopeTheromstats.push(things[key]['id']);
 						}
 					}
 				}
 				//console.log('sinope thermostats: '+ sinope_theromstats)
 				
 			})
-			resolve(temp_sinope_theromstats)
-		})
+			return sinopeTheromstats;
 		};
 
 		async get_temp_property(){
