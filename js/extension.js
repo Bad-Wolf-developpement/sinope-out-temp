@@ -7,7 +7,7 @@
             this.addMenuEntry('Sinope');
 			
 			this.sinopeMacOUI = "500b914"
-		
+			Promise.resolve(this.sinope_thermostats = this.get_sinope_thermostat());
             this.content = '';
 			fetch(`/extensions/${this.id}/views/content.html`)
 			.then((res) => res.text())
@@ -20,9 +20,7 @@
 			.catch((e) => console.error('Failed to fetch content:', e));
         }
 
-        show = async () => {
-			this.sinope_thermostats = await this.get_sinope_thermostat();
-			this.temperature_property = await this.get_temp_property();
+        show(){
             let testDiv = 'extension-sinope-out-temp-test';
 			
     		if(this.content == ''){
@@ -66,7 +64,7 @@
             
         }
 
-		async get_sinope_thermostat(){
+		get_sinope_thermostat(){
 			console.log('get sinope thermostats')
 			let sinopeTheromstats = []
 			API.getThings().then((things)=>{
@@ -86,7 +84,7 @@
 			return sinopeTheromstats;
 		};
 
-		async get_temp_property(){
+		get_temp_property(){
 			let tempProperty = []
 			API.getThings().then((things)=> {
 				for (let thing in things){
