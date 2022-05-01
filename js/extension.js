@@ -33,7 +33,7 @@
     			this.view.innerHTML = this.content;
     		}
 			
-			if(this.sinope_thermostats < 1){
+			if(this.sinope_thermostats.length < 1){
 				document.getElementById('extension-sinope-out-temp-warning')
 				.innerHTML = 'No sinope Thermostat found. Did you have any on the gateway?'
 				return;
