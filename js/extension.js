@@ -10,7 +10,7 @@
 			
 			this.sinopeMacOUI = "500b914"
 
-			this.sinope_thermostats = this.get_sinope_thermostat();
+			this.sinope_thermostats = get_sinope_thermostat();
 			console.log(this.sinope_thermostats)
 			this.temperature_property = get_temp_property();
             
