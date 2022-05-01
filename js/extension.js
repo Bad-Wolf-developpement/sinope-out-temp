@@ -86,7 +86,9 @@
 							let propertyTitle = things[thing]['properties'][property]['title']
 							if (things[thing]['properties'][property]['@type'] == "TemperatureProperty"){
 								if (!tempProperty.includes([thingID, propertyTitle])){
-									tempProperty.push([thingID, propertyTitle]);
+									if (thingID.indexOf(this.sinopeMacOUI) < 0){
+										tempProperty.push([thingID, propertyTitle]);
+									}
 								}
 							}
 					}
