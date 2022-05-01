@@ -7,8 +7,7 @@
             this.addMenuEntry('Sinope');
 			
 			this.sinopeMacOUI = "500b914"
-			this.sync_data();
-            
+		
             this.content = '';
 			fetch(`/extensions/${this.id}/views/content.html`)
 			.then((res) => res.text())
@@ -22,7 +21,8 @@
         }
 
         show = async () => {
-			const test = await this.sync_data();
+			this.sinope_thermostats = await this.get_sinope_thermostat();
+			this.temperature_property = await this.get_temp_property();
             let testDiv = 'extension-sinope-out-temp-test';
 			
     		if(this.content == ''){
@@ -84,11 +84,6 @@
 				
 			})
 			return sinope_theromstats;
-		}
-
-		async sync_data(){
-			this.sinope_thermostats = await this.get_sinope_thermostat();
-			this.temperature_property = await this.get_temp_property();
 		}
 
 		async get_temp_property(){
