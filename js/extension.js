@@ -31,7 +31,7 @@
     		else{
     			this.view.innerHTML = this.content;
     		}
-			document.getElementById(testDiv).innerHTML = this.sinope_thermostats + '\r\n' + this.temperature_property
+			document.getElementById(testDiv).innerHTML =  'TEST'//this.sinope_thermostats + '\r\n' + this.temperature_property
 			
             /*
 			window.API.postJson(
