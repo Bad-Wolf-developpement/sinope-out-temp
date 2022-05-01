@@ -7,7 +7,7 @@
             this.addMenuEntry('Sinope');
 			
 			this.sinopeMacOUI = "500b914"
-			Promise.resolve(this.sinope_thermostats = this.get_sinope_thermostat());
+			this.get_sinope_thermostat().then(result => this.sinope_thermostats = result);
             this.content = '';
 			fetch(`/extensions/${this.id}/views/content.html`)
 			.then((res) => res.text())
