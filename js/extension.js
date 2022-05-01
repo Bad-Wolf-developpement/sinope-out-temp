@@ -9,6 +9,7 @@
 			this.sinopeMacOUI = "500b914"
 
 			this.sinope_thermostats = this.get_sinope_thermostat();
+			console.log(this.sinope_thermostats)
 			this.temperature_property = this.get_temp_property();
             
             this.content = '';
@@ -63,12 +64,12 @@
 					if ((things[key]['@type'] == "Thermostat") && (things[key]['id']
 					.indexOf(this.sinopeMacOUI) >= 0)){
 						if (!sinope_theromstats.includes(things[key]['id'])){
-							console.log('thermostats id: ' + things[key]['id'])
+							//console.log('thermostats id: ' + things[key]['id'])
 							sinope_theromstats.push(things[key]['id']);
 						}
 					}
 				}
-				console.log('sinope thermostats: '+ sinope_theromstats)
+				//console.log('sinope thermostats: '+ sinope_theromstats)
 				return sinope_theromstats;
 			})
 			
