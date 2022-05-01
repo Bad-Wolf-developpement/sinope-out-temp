@@ -7,6 +7,7 @@
             this.addMenuEntry('Sinope');
 			
 			this.sinopeMacOUI = "500b914"
+			this.sync_data();
             
             this.content = '';
 			fetch(`/extensions/${this.id}/views/content.html`)
@@ -22,11 +23,7 @@
 
         async show(){
             let testDiv = 'extension-sinope-out-temp-test';
-			console.log('Before sync');
-			console.log(this.sinope_thermostats);
-			console.log(this.temperature_property);
-			await this.sync_data();
-			console.log('after sync')
+			
 			console.log(this.sinope_thermostats);
 			console.log(this.temperature_property);
 			
