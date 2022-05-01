@@ -33,8 +33,13 @@
     			this.view.innerHTML = this.content;
     		}
 			
-			console.log(this.sinope_thermostats)
-			console.log(this.temperature_property)
+			if(this.sinope_thermostats < 1){
+				document.getElementById('extension-sinope-out-temp-warning')
+				.innerHTML = 'No sinope Thermostat found. Did you have any on the gateway?'
+				return;
+			}
+			document.getElementById(testDiv)
+			.innerHTML = 'TEST'
             /*
 			window.API.postJson(
 				`/extensions/${this.id}]/api/init`,
@@ -74,7 +79,6 @@
 				
 			})
 			return sinope_theromstats;
-			
 		}
 
 		get_temp_property(){
