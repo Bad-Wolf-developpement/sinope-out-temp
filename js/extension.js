@@ -2,8 +2,8 @@
     console.log("extension.js loaded");
     class sinopeOutTemp extends window.Extension {
         constructor(){
-			this.get_sinope_thermostat();
-			this.get_temp_property();
+			get_sinope_thermostat();
+			get_temp_property();
             console.log("extension.js class created");
             super('sinope-out-temp');
             this.addMenuEntry('Sinope');
