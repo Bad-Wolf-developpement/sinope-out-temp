@@ -14,13 +14,13 @@
 			.then((text) => {
 				this.content = text;
 				if( document.location.href.endsWith("sinope-out-temp") ){
-					this.show();
+					await this.show();
 				}
 			})
 			.catch((e) => console.error('Failed to fetch content:', e));
         }
 
-        show(){
+        async show(){
             let testDiv = 'extension-sinope-out-temp-test';
 			console.log(this.sinope_thermostats);
 			console.log(this.temperature_property);
