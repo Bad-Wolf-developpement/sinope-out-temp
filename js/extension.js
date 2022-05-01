@@ -30,7 +30,6 @@
 			console.log(this.sinope_thermostats);
 			console.log(this.temperature_property);
 			
-			await this.async_get_temp_properties();
     		if(this.content == ''){
     			return;
     		}
