@@ -22,6 +22,7 @@
         }
 
         show = async () => {
+			const test = await this.sync_data();
             let testDiv = 'extension-sinope-out-temp-test';
 			
     		if(this.content == ''){
@@ -31,7 +32,6 @@
     			this.view.innerHTML = this.content;
     		}
 
-			await this.sync_data();
 			console.log(this.sinope_thermostats.length);
 			if(this.sinope_thermostats.length < 1){
 				document.getElementById('extension-sinope-out-temp-warning')
