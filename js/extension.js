@@ -21,11 +21,8 @@
 			.catch((e) => console.error('Failed to fetch content:', e));
         }
 
-        async show(){
+        show = async () => {
             let testDiv = 'extension-sinope-out-temp-test';
-			
-			console.log(this.sinope_thermostats);
-			console.log(this.temperature_property);
 			
     		if(this.content == ''){
     			return;
@@ -33,6 +30,8 @@
     		else{
     			this.view.innerHTML = this.content;
     		}
+
+			await this.sync_data();
 			console.log(this.sinope_thermostats.length);
 			if(this.sinope_thermostats.length < 1){
 				document.getElementById('extension-sinope-out-temp-warning')
