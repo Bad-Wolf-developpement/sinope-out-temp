@@ -9,7 +9,7 @@
 			this.sinopeMacOUI = "500b914"
 
 			this.sinope_thermostats = this.get_sinope_thermostat();
-			console.log(this.sinope_thermostats)
+			
 			this.temperature_property = this.get_temp_property();
             
             this.content = '';
@@ -32,8 +32,9 @@
     		else{
     			this.view.innerHTML = this.content;
     		}
-			document.getElementById(testDiv).innerHTML =  this.sinope_thermostats// + '\r\n' + this.temperature_property
 			
+			console.log(this.sinope_thermostats)
+			console.log(this.temperature_property)
             /*
 			window.API.postJson(
 				`/extensions/${this.id}]/api/init`,
@@ -89,9 +90,9 @@
 								}
 							}
 					}
-				}
-				return tempProperty;
+				}	
 			})
+			return tempProperty;
 		}
     }
     
