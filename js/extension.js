@@ -38,6 +38,11 @@
 				.innerHTML = 'No sinope Thermostat found. Did you have any on the gateway?'
 				return;
 			}
+			
+			if(this.temperature_property.length < 1){
+				document.getElementById('extension-sinope-out-temp-warning')
+				.innerHTML = 'No Temperature Property found on other devices.'
+			}
 			document.getElementById(testDiv)
 			.innerHTML = 'TEST'
             /*
