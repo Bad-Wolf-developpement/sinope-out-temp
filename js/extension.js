@@ -7,10 +7,6 @@
             this.addMenuEntry('Sinope');
 			
 			this.sinopeMacOUI = "500b914"
-
-			this.sinope_thermostats = this.async_get_sinope();
-			
-			this.temperature_property = this.async_get_temp_properties();
             
             this.content = '';
 			fetch(`/extensions/${this.id}/views/content.html`)
@@ -28,6 +24,9 @@
             let testDiv = 'extension-sinope-out-temp-test';
 			console.log(this.sinope_thermostats);
 			console.log(this.temperature_property);
+			this.sinope_thermostats = this.async_get_sinope();
+			
+			this.temperature_property = this.async_get_temp_properties();
     		if(this.content == ''){
     			return;
     		}
