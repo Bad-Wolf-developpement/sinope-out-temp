@@ -24,13 +24,14 @@
         }
 
         show(){
-            
+            let testDiv = 'extension-sinope-out-temp-test'
     		if(this.content == ''){
     			return;
     		}
     		else{
     			this.view.innerHTML = this.content;
     		}
+			document.getElementById(testDiv).innerHTML = this.sinope_thermostats + '\r\n' + this.temperature_property
 			
             /*
 			window.API.postJson(
