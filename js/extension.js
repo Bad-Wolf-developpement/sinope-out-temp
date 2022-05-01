@@ -68,9 +68,10 @@
 						}
 					}
 				}
+				console.log('sinope thermostats: '+ sinope_theromstats)
+				return sinope_theromstats;
 			})
-			console.log('sinope thermostats: '+ sinope_theromstats)
-			return sinope_theromstats;
+			
 		}
 
 		get_temp_property(){
