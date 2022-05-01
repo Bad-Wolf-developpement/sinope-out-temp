@@ -26,8 +26,8 @@
 
         show(){
             let testDiv = 'extension-sinope-out-temp-test';
-			this.sinope_thermostats;
-			this.temperature_property;
+			console.log(this.sinope_thermostats);
+			console.log(this.temperature_property);
     		if(this.content == ''){
     			return;
     		}
