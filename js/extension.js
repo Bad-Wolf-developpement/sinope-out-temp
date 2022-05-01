@@ -92,8 +92,8 @@
 		}
 
 		async sync_data(){
-			this.sinope_thermostats = await this.get_sinope_thermostat()
-			this.temperature_property = await this.get_temp_property
+			this.sinope_thermostats = await this.get_sinope_thermostat();
+			this.temperature_property = await this.get_temp_property();
 		}
 
 		async get_temp_property(){
