@@ -75,9 +75,9 @@
 				for (let key in things){
 					if ((things[key]['@type'] == "Thermostat") && (things[key]['id']
 					.indexOf(this.sinopeMacOUI) >= 0)){
-						if (!sinope_theromstats.includes(things[key]['id'])){
+						if (!temp_sinope_theromstats.includes(things[key]['id'])){
 							//console.log('thermostats id: ' + things[key]['id'])
-							sinope_theromstats.push(things[key]['id']);
+							temp_sinope_theromstats.push(things[key]['id']);
 						}
 					}
 				}
