@@ -86,7 +86,6 @@
 							let propertyTitle = things[thing]['properties'][property]['title']
 							if (things[thing]['properties'][property]['@type'] == "TemperatureProperty"){
 								if (!tempProperty.includes([thingID, propertyTitle])){
-									console.log('thing id: ' + thingID + ' property: ' + propertyTitle)
 									tempProperty.push([thingID, propertyTitle]);
 								}
 							}
