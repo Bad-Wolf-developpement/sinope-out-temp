@@ -14,7 +14,7 @@
 			.then((text) => {
 				this.content = text;
 				if( document.location.href.endsWith("sinope-out-temp") ){
-					await this.show();
+					this.show();
 				}
 			})
 			.catch((e) => console.error('Failed to fetch content:', e));
@@ -24,9 +24,9 @@
             let testDiv = 'extension-sinope-out-temp-test';
 			console.log(this.sinope_thermostats);
 			console.log(this.temperature_property);
-			this.sinope_thermostats = this.async_get_sinope();
+			this.sinope_thermostats = await this.get_sinope_thermostat();
 			
-			this.temperature_property = this.async_get_temp_properties();
+			this.temperature_property = await this.get_temp_property();
     		if(this.content == ''){
     			return;
     		}
