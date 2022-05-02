@@ -33,7 +33,7 @@
 				}
 
 				console.log(this.sinope_thermostats.length);
-				if(this.sinope_thermostats.length < 0){
+				if(this.sinope_thermostats.length < 1){
 					document.getElementById('extension-sinope-out-temp-warning')
 					.innerHTML = 'No sinope Thermostat found. Did you have any on the gateway?'
 					return;
