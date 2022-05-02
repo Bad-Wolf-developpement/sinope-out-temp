@@ -42,6 +42,7 @@
 				if(this.temperature_property.length < 1){
 					document.getElementById('extension-sinope-out-temp-warning')
 					.innerHTML = 'No Temperature Property found on other devices.'
+					return;
 				}
 				document.getElementById(testDiv)
 				.innerHTML = 'TEST'
